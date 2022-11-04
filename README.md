@@ -1,2 +1,3 @@
 # RockPaperScissors
-first js game. 
+
+first js game.
