@@ -48,11 +48,9 @@ function doPlayerMove(playerChoice) {
   gamesListElement.innerText = JSON.stringify(gameState.roundsPlayed);
 
   // check if we're at the end of the game
-  if (gameState.roundsPlayed.length >= gameConfig.totalRounds) {
-    doResetRound();
-    // end the game and tell the player who won
-    // set up for next game, maybe
-  }
+
+  // end the game and tell the player who won
+  // set up for next game, maybe
 }
 
 function doResetRound() {
@@ -69,7 +67,11 @@ document.getElementById("paper").addEventListener("click", () => {
 document.getElementById("scissors").addEventListener("click", () => {
   doPlayerMove(values.scissors);
 });
-
+// reset round via user input
+document.getElementById("reset").addEventListener("click", () => {
+  doResetRound();
+  gamesListElement.innerText = JSON.stringify((gameState.roundsPlayed = []));
+});
 // arrow function example
 addEventListener("blah", () => {
   // execute this code when `blah` is fired
