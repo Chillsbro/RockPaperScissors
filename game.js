@@ -56,6 +56,7 @@ function doPlayerMove(playerChoice) {
     return;
   }
   // check if we're at the end of the game
+  //test
 
   // end the game and tell the player who won
   // set up for next game, maybe
